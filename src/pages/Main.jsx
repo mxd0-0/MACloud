@@ -4,6 +4,10 @@ import { HeroSection } from "../components/Hero";
 import { HostingProductCards } from "../components/HostingProductCards";
 import { LineConnector } from "../components/LineConnector"; // Corrected import syntax
 import { throttle } from 'lodash';
+import SupportSection from "../sections/SupportSection.jsx";
+import DdosProtectionSection from "../sections/DdosProtectionSection.jsx";
+import LoadFastSection from "../sections/LoadFastSection.jsx";
+import TestimonialsSection from "../sections/TestimonialsSection.jsx";
 
 export default function HomePage() {
   const heroRef = useRef(null);
@@ -67,7 +71,10 @@ export default function HomePage() {
       <Navbar />
       <HeroSection ref={heroRef} />
       <HostingProductCards ref={hostingCardsRef} />
-
+      <LoadFastSection/>
+      <DdosProtectionSection />
+      <SupportSection />
+      <TestimonialsSection />
       {heroPoint && cardPoints.length > 0 && (
         <LineConnector heroPoint={heroPoint} targetPoints={cardPoints} />
       )}
