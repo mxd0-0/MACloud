@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -37,17 +39,7 @@ h1 {
   line-height: 1.1;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
+
 button:hover {
   border-color: #646cff;
 }
@@ -67,4 +59,20 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+@keyframes drawLine {
+  from {
+    stroke-dashoffset: 1000; /* A large value to hide the line initially */
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-draw-line {
+  animation: drawLine 2s ease-out forwards; /* Adjust duration and timing as needed */
+  /* You might need to set stroke-dasharray and stroke-dashoffset explicitly here too,
+     or directly on the <line> element in LineConnector.jsx.
+     For this example, it's set in LineConnector.jsx. */
 }
