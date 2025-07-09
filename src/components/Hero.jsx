@@ -1,24 +1,7 @@
-import React, { useRef, useImperativeHandle } from "react";
+import React from "react";
 import heroImage from "../assets/Hero.svg";
 
-export const HeroSection = React.forwardRef((props, ref) => {
-  const imageRef = useRef(null);
-
-  // Expose the image element and its calculated CENTER point
-  useImperativeHandle(ref, () => ({
-    getImageElement: () => imageRef.current,
-    getHeroCenter: () => { // Renamed this function for clarity
-      if (imageRef.current) {
-        const rect = imageRef.current.getBoundingClientRect();
-        return {
-          x: rect.left + rect.width / 2, // Center X
-          y: rect.top + rect.height / 2 // Center Y
-        };
-      }
-      return null;
-    }
-  }));
-
+export const HeroSection = () => {
   return (
     <div className="bg-[#0E0E0E] text-white font-sans px-4 sm:px-6 md:px-12 py-16 relative">
       <div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-10">
@@ -36,7 +19,6 @@ export const HeroSection = React.forwardRef((props, ref) => {
 
         <div className="flex justify-center">
           <img
-            ref={imageRef}
             src={heroImage}
             alt="Hosting Illustration"
             className="w-full max-w-xs sm:max-w-sm md:max-w-md"
@@ -45,4 +27,4 @@ export const HeroSection = React.forwardRef((props, ref) => {
       </div>
     </div>
   );
-});
+};
