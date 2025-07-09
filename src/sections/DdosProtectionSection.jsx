@@ -1,5 +1,7 @@
 // src/sections/DdosProtectionSection.jsx (Updated)
 import React from 'react';
+import illustration from "../assets/ddos-protection-illustration.svg";
+
 
 const DdosProtectionSection = () => {
     return (
@@ -9,7 +11,7 @@ const DdosProtectionSection = () => {
                     {/* Image Column: First in DOM for mobile, ordered to the right on desktop */}
                     <div className="flex justify-center lg:order-last">
                         <img
-                            src="/src/assets/ddos-protection-illustration.svg"
+                            src={illustration}
                             alt="Illustration of a security shield protecting servers from attack"
                             className="max-w-lg w-full h-auto object-contain"
                         />

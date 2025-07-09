@@ -1,5 +1,7 @@
 // src/sections/LoadFastSection.jsx
 import React from 'react';
+import illustration from "../assets/load-fast-illustration.svg";
+
 
 const LoadFastSection = () => {
     return (
@@ -9,7 +11,7 @@ const LoadFastSection = () => {
                     {/* Image Column: Order changed for mobile-first layout */}
                     <div className="flex justify-center lg:order-last">
                         <img
-                            src="/src/assets/load-fast-illustration.svg" // Update with the correct path to your image
+                            src={illustration} // Update with the correct path to your image
                             alt="Illustration of a fast-loading website with a rocket and analytics charts"
                             className="max-w-lg w-full h-auto object-contain"
                         />

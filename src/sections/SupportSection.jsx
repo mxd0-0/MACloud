@@ -1,5 +1,7 @@
 // src/sections/SupportSection.jsx
 import React from 'react';
+import illustration from "../assets/support-illustration.svg";
+
 
 const SupportSection = () => {
     return (
@@ -9,7 +11,7 @@ const SupportSection = () => {
                     {/* Image Column: First in DOM to appear on top on mobile */}
                     <div className="flex justify-center">
                         <img
-                            src="/src/assets/support-illustration.svg"
+                            src={illustration}
                             alt="Illustration showing 24/7 support with a laptop, chat, and phone icons"
                             className="max-w-lg w-full h-auto object-contain"
                         />
