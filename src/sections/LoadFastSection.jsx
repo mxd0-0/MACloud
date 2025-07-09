@@ -6,7 +6,7 @@ import illustration from "../assets/load-fast-illustration.svg";
 const LoadFastSection = () => {
     return (
         <section className="py-20 sm:py-28">
-            <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <div className=" max-w-7xl mx-auto px-6 lg:px-8">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-12 items-center">
                     {/* Image Column: Order changed for mobile-first layout */}
                     <div className="flex justify-center lg:order-last">
