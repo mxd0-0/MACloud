@@ -1,8 +1,9 @@
 // src/sections/DdosProtectionSection.jsx (Updated)
 import React from 'react';
 import illustration from "../assets/ddos-protection-illustration.svg";
+import MotionWrap from '../components/MotionWrap'; // Import the HOC
 
-
+// eslint-disable-next-line react-refresh/only-export-components
 const DdosProtectionSection = () => {
     return (
         <section className="py-20 sm:py-28">
@@ -35,4 +36,5 @@ const DdosProtectionSection = () => {
     );
 };
 
-export default DdosProtectionSection;
+// eslint-disable-next-line react-refresh/only-export-components
+export default MotionWrap(DdosProtectionSection, 'w-full');

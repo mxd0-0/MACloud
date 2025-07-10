@@ -1,5 +1,6 @@
 import React from 'react';
 import quoteIcon from '../assets/quote-icon.svg'; // update path if needed
+import MotionWrap from '../components/MotionWrap'; // Import the HOC
 
 const testimonials = [
   {
@@ -16,7 +17,8 @@ const testimonials = [
   },
 ];
 
-export default function TestimonialsSection() {
+// eslint-disable-next-line react-refresh/only-export-components
+const TestimonialsSection =()=> {
   return (
     <section className="py-20 sm:py-28 bg-[#0E0E0E] text-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -26,8 +28,11 @@ export default function TestimonialsSection() {
 
         <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-[#282828] p-8 rounded-lg flex flex-col h-full">
-              <img
+              <div
+                  key={index}
+                  className="bg-[#282828] p-8 rounded-lg flex flex-col h-full transition-transform duration-300 hover:scale-105"
+              >
+                <img
                 className="w-20 h-auto mx-auto mb-6"
                 src={quoteIcon}
                 alt="Quotation mark"
@@ -60,3 +65,5 @@ export default function TestimonialsSection() {
     </section>
   );
 }
+// eslint-disable-next-line react-refresh/only-export-components
+export default MotionWrap(TestimonialsSection, 'w-full');

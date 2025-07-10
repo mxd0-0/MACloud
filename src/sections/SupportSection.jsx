@@ -1,8 +1,10 @@
 // src/sections/SupportSection.jsx
 import React from 'react';
 import illustration from "../assets/support-illustration.svg";
+import MotionWrap from '../components/MotionWrap'; // Import the HOC
 
 
+// eslint-disable-next-line react-refresh/only-export-components
 const SupportSection = () => {
     return (
         <section className="py-20 sm:py-28">
@@ -35,4 +37,5 @@ const SupportSection = () => {
     );
 };
 
-export default SupportSection;
+// eslint-disable-next-line react-refresh/only-export-components
+export default MotionWrap(SupportSection, 'w-full');

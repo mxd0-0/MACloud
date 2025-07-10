@@ -1,6 +1,8 @@
 // src/sections/LoadFastSection.jsx
 import React from 'react';
 import illustration from "../assets/load-fast-illustration.svg";
+import MotionWrap from '../components/MotionWrap'; // Import the HOC
+
 
 
 const LoadFastSection = () => {
@@ -35,4 +37,4 @@ const LoadFastSection = () => {
     );
 };
 
-export default LoadFastSection;
+export default MotionWrap(LoadFastSection, 'w-full');
