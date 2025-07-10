@@ -1,5 +1,9 @@
 # MACloud - Web Hosting Service
 
+<p align="center">
+  <img src="macloud.png" alt="MACloud Logo">
+</p>
+
 A modern, responsive web hosting service website built with React and Vite.
 
 ## 🚀 Live Demo
